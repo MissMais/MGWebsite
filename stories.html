@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stories | Modest Gallery</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    :root {
+      --primary: #666F80;
+      --accent: #FB6D6C;
+      --white: #ffffff;
+      --light: #f4f5f7;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: var(--light);
+      color: var(--primary);
+    }
+
+    /* ================= NAVBAR ================= */
+    header {
+      position: sticky;
+      top: 0;
+      background: #fff;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, .06);
+      z-index: 1000; /* ✅ FIX */
+    }
+
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .brand img {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .brand h1 {
+      font-size: 1.4rem;
+      font-weight: 700;
+    }
+
+    .brand span {
+      color: var(--accent);
+    }
+
+    nav a {
+      margin-left: 2rem;
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: 500;
+      position: relative;
+    }
+
+    nav a::after {
+      content: '';
+      width: 0;
+      height: 2px;
+      background: var(--accent);
+      position: absolute;
+      left: 0;
+      bottom: -5px;
+      transition: .3s;
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* ===== PAGE HEADER ===== */
+    .page-header {
+      text-align: center;
+      padding: 5rem 2rem 4rem; /* ✅ extra top space */
+      background: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .page-header h1 {
+      /* font-size: 2.5rem; */
+      margin-bottom: .5rem;
+    }
+
+    .page-header span {
+      color: var(--accent);
+    }
+
+    /* ===== STORIES SECTION ===== */
+    .stories-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 4rem 2rem;
+      position: relative;
+      z-index: 1; /* ✅ FIX */
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .story {
+      background: #fff;
+      padding: 2.5rem;
+      border-radius: 25px;
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+      transition: transform .4s ease;
+      position: relative;
+      z-index: 1; /* ✅ FIX */
+    }
+
+    .story:hover {
+      transform: translateY(-8px);
+    }
+
+    .story h4 {
+      color: var(--accent);
+      margin-bottom: .8rem;
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background: var(--primary);
+      color: #fff;
+      padding: 4rem 2rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      text-align: center;
+    }
+
+    footer h3 {
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+
+    .copy {
+      text-align: center;
+      margin-top: 2rem;
+      opacity: .8;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media(max-width:768px) {
+      .page-header h2 {
+        font-size: 2rem;
+      }
+
+      nav a {
+        margin-left: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="nav">
+      <div class="brand">
+        <img src="images/logo.png" alt="logo">
+        <h1>Modest <span>Gallery</span></h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="stories.html">Stories</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="page-header">
+    <h1>Our <span>Stories</span></h1>
+    <p><i>Real experiences shared by our <strong>Exhibitors & Visitors</strong></i></p>
+  </section>
+
+  <section class="stories-section">
+    <h2 style="text-align: center; margin-bottom: 40px; color:#FB6D6C">Exhibitors</h2>
+
+    <div class="story-grid">
+      <div class="story">
+        <h4>Elegant Clothings– H.M. Libaas Collection</h4>
+        <p>"The event helped us connect with the right audience and significantly boosted our brand visibility. The organization and overall experience exceeded our expectations."</p>
+      </div>
+
+      <div class="story">
+        <h4>Food Partner - Mann-O-Salva</h4>
+        <p>“The event provided a great platform to showcase our food to the right audience. The organization and ambience made it a pleasant and memorable experience.”</p>
+      </div>
+
+      <div class="story">
+        <h4>Traditional Wear - Modest Hijab Store</h4>
+        <p>“The event created a meaningful opportunity to present our hijab and abaya range in an environment that respected style, culture, and creativity.”</p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="stories-section">
+    <h2 style="text-align: center; margin-top: 0px; margin-bottom: 40px;">Visitors</h2>
+
+    <div class="story-grid">
+      <div class="story">
+        <h4>Maymana Khanam</h4>
+        <p>“Shaam-e-Roshan felt like a beautiful evening spent exploring creativity, food, and culture. The ambience made the entire experience truly enjoyable.”</p>
+      </div>   
+      
+      <div class="story">
+        <h4>Ramsha Haleem</h4>
+        <p>“Walking through Shaam-e-Roshan felt calm and inviting. The atmosphere was pleasant, and every corner had something interesting to discover.”</p>
+      </div> 
+      
+      <div class="story">
+        <h4>Saim Waseem</h4>
+        <p>“We really enjoyed visiting Shaam-e-Roshan. The setup was comfortable, the stalls were unique, and the overall experience was memorable.”</p>
+      </div> 
+      
+    </div>
+  </section>
+
+  <footer id="contact">
+    <div class="footer-grid">
+      <div>
+        <h3>Modest Gallery</h3>
+        <p>Creators of magical platform for small businesses to shine through curated exhibitions and unforgettable
+          events.</p>
+      </div>
+      <div>
+        <h3>Event</h3>
+        <p>Shaam‑e‑Roshan</p>
+        <p>Bhopal</p>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+
+        <p>
+          <i class="fa-solid fa-envelope"></i>
+          gallery@modest.co.in
+        </p>
+
+        <p>
+          <i class="fa-brands fa-instagram"></i>
+          <a href="https://www.instagram.com/modest_.gallery?igsh=MXM4aTlkNjhqdXZ5aA==" target="_blank"
+          style="text-decoration:none;color:white;">
+            modest_.gallery
+          </a>
+        </p>
+
+        <p>
+          <i class="fa-solid fa-phone"></i>
+          +91-6260499281
+        </p>
+      </div>
+
+    </div>
+    <div class="copy">© 2024 Modest Gallery</div>
+  </footer>
+
+</body>
+</html>
